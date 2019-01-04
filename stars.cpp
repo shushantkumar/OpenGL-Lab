@@ -58,10 +58,10 @@ enum {
   CIRCLE = 1
 };
 
-#define MAXSTARS 400
+#define MAXSTARS 4000
 #define MAXPOS 10000
-#define MAXWARP 10
-#define MAXANGLES 6000
+#define MAXWARP 100
+#define MAXANGLES 60000
 
 typedef struct _starRec {
   GLint type;
@@ -70,12 +70,12 @@ typedef struct _starRec {
 } starRec;
 
 GLenum doubleBuffer;
-GLint windW = 300, windH = 300;
+GLint windW = 1200, windH = 800;
 
 GLenum flag = NORMAL;
 GLint starCount = MAXSTARS / 2;
-float speed = 1.0;
-GLint nitro = 0;
+float speed = 10.0;
+GLint nitro = 2;
 starRec stars[MAXSTARS];
 float sinTable[MAXANGLES];
 
@@ -188,7 +188,8 @@ ShowStar(GLint n)
       y1 += windH / 2.0;
 
       glLineWidth(MAXPOS / 100.0 / stars[n].z[0] + 1.0);
-      glColor3f(1.0, (MAXWARP - speed) / MAXWARP, (MAXWARP - speed) / MAXWARP);
+      // glColor3f(1.0, (MAXWARP - speed) / MAXWARP, (MAXWARP - speed) / MAXWARP);
+      glColor3f(0.0,0.6,0.5);
       if (fabs(x0 - x1) < 1.0 && fabs(y0 - y1) < 1.0) {
         glBegin(GL_POINTS);
         glVertex2f(x0, y0);
