@@ -1,7 +1,6 @@
 #include <GL/glut.h>
 #include <GL/gl.h>
  
-
 void lines(){
     glClear(GL_COLOR_BUFFER_BIT); //clearing the screen
     // Between glBegin and glEnd write the code
