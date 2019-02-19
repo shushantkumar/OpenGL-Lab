@@ -22,26 +22,36 @@ void scene() {
         glVertex2f(-1.0, -1.0);
     glEnd();
 
-    /***** House *****/
-    // Front wall
+
     glBegin(GL_POLYGON);
-    glColor3f(242.0/255, 207.0/255, 67.0/255);
+        glColor3f(250.0/255, 65.0/255, 23.0/255);
+        glVertex2f(-1.0, -0.8);
+        glVertex2f(-0.5, 0.5);
+        glVertex2f(0.0, -0.8);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+        glColor3f(250.0/255, 65.0/255, 23.0/255);
+        glVertex2f(0.0, -0.8);
+        glVertex2f(0.5, 0.5);
+        glVertex2f(1.0, -0.8);
+    glEnd();
+
+    /***** House *****/
+    glBegin(GL_POLYGON);
+    glColor3f(94.0/255, 125.0/255, 126.0/255);
         glVertex2f(-0.8, -0.8);
         glVertex2f(-0.5, -0.8);
         glVertex2f(-0.5, -0.3);
         glVertex2f(-0.8, -0.3);
     glEnd();
-
-    // Side wall
     glBegin(GL_POLYGON);
-    glColor3f(211.0/255, 180.0/255, 57.0/255);
+    glColor3f(0.0/255, 128.0/255, 128.0/255);
         glVertex2f(-0.5, -0.8);
         glVertex2f(-0.0, -0.8);
         glVertex2f(-0.0, -0.3);
         glVertex2f(-0.5, -0.3);
     glEnd();
-
-    // Front roof
     glBegin(GL_POLYGON);
     glColor3f(181.0/255, 7.0/255, 7.0/255);
         glVertex2f(-0.85, -0.3);
@@ -49,15 +59,13 @@ void scene() {
         glVertex2f(-0.65, -0.0);
     glEnd();
     glBegin(GL_POLYGON);
-    glColor3f(150.0/255, 18.0/255, 18.0/255);
-        for(int theta=0; theta<360; theta++) {
-            glColor3f(191.0/255, 190.0/255, 172.0/255);
-            double ang = theta * PI / 180;
-            glVertex2f(-0.65 + 0.05 * cos(ang), -0.20 + 0.05 * sin(ang));
-        }
+        glColor3f(150.0/255, 180.0/255, 18.0/255);
+        glVertex2f(-0.65 + 0.05, -0.20 + 0.05);
+        glVertex2f(-0.65 + 0.05, -0.20 - 0.05);
+        glVertex2f(-0.65 - 0.05, -0.20 - 0.05);
+        glVertex2f(-0.65 - 0.05, -0.20 + 0.05);
     glEnd();
 
-    // Side roof
     glBegin(GL_POLYGON);
     glColor3f(150.0/255, 18.0/255, 18.0/255);
         glVertex2f(-0.45, -0.3);
@@ -66,18 +74,16 @@ void scene() {
         glVertex2f(0.05, -0.3);
     glEnd();
 
-    // Front door
     glBegin(GL_POLYGON);
-    glColor3f(165.0/255, 63.0/255, 4.0/255);
+    glColor3f(140.0/255, 18.0/255, 18.0/255);
         glVertex2f(-0.71, -0.8);
         glVertex2f(-0.59, -0.8);
         glVertex2f(-0.59, -0.5);
         glVertex2f(-0.71, -0.5);
     glEnd();
 
-    // Side Window
     glBegin(GL_POLYGON);
-    glColor3f(0.0/255, 0.0/255, 0.0/255);
+    glColor3f(140.0/255, 18.0/255, 18.0/255);
         glVertex2f(-0.3, -0.55);
         glVertex2f(-0.1, -0.55);
         glVertex2f(-0.1, -0.35);
@@ -91,13 +97,12 @@ void scene() {
         glVertex2f(-0.27, -0.38);
     glEnd();
     glBegin(GL_POLYGON);
-    glColor3f(0.0/255, 0.0/255, 0.0/255);
+    glColor3f(140.0/255, 18.0/255, 18.0/255);
         glVertex2f(-0.3, -0.46);
         glVertex2f(-0.1, -0.46);
         glVertex2f(-0.1, -0.44);
         glVertex2f(-0.3, -0.44);
     glEnd();
-
     /*****************/
     
     // Moon
@@ -113,9 +118,8 @@ void scene() {
 
 
     /***** Bus *****/
-    // Body
     glBegin(GL_POLYGON);
-    glColor3f(0.0/255, 76.0/255, 99.0/255);
+    glColor3f(116.0/255, 134.0/255, 237.0/255);
         glVertex2f(0.2, -0.7);
         glVertex2f(0.9, -0.7);
         glVertex2f(0.9, -0.35);
@@ -161,26 +165,43 @@ void scene() {
         glVertex2f(0.2, -0.35);
     glEnd();
     glBegin(GL_POLYGON);
-    glColor3f(150.0/255, 150.0/255, 150.0/255);
+    glColor3f(100.0/255, 100.0/255, 100.0/255);
         glVertex2f(0.35, -0.50);
         glVertex2f(0.45, -0.50);
         glVertex2f(0.45, -0.40);
         glVertex2f(0.35, -0.40);
     glEnd();
     glBegin(GL_POLYGON);
-    glColor3f(150.0/255, 150.0/255, 150.0/255);
+    glColor3f(100.0/255, 100.0/255, 100.0/255);
         glVertex2f(0.50, -0.50);
         glVertex2f(0.60, -0.50);
         glVertex2f(0.60, -0.40);
         glVertex2f(0.50, -0.40);
     glEnd();
     glBegin(GL_POLYGON);
-    glColor3f(150.0/255, 150.0/255, 150.0/255);
+    glColor3f(100.0/255, 100.0/255, 100.0/255);
         glVertex2f(0.65, -0.50);
         glVertex2f(0.75, -0.50);
         glVertex2f(0.75, -0.40);
         glVertex2f(0.65, -0.40);
     glEnd();
+
+
+    int num = rand() % 30 + 20;
+    while(num--) {
+        double x1, x2, y1, y2;
+        x1 = (rand() % 100) / 50.0 - 1.0;
+        y1 = (rand() % 100) / 50.0 - 1.0;
+        x2 = x1 - ((rand() % 100) / 10000.0 + 0.09);
+        y2 = y1 - ((rand() % 100) / 10000.0 + 0.09);
+        glBegin(GL_POLYGON);
+            glColor3f(255.0/255, 255.0/255, 255.0/255);
+            glVertex2f(x1+0.05, y1+0.05);
+            glVertex2f(x2, y2+0.05);
+            glVertex2f(x1+0.05, y1);
+            glVertex2f(x2, y2+0.05);
+        glEnd();
+    }
 
     glFlush();
 }
